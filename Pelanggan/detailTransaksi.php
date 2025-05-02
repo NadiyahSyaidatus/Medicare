@@ -111,8 +111,8 @@ if(isset($_POST["submit"])) {
                         <div class="fw-bold">Total Harga: Rp<?= number_format($detailTransaksi["totalHarga"], 0, ',', '.'); ?></div>
                         <div class="mt-3 text-end">
                             <h5>Pemilik Toko</h5>
-                            <img src="../img/ttd1.png" alt="Tanda Tangan" style="width: 200px; height: 200px;">
-                            <p class="fw-bold">APOTEK WIN</p>
+                            <img src="../img/ttd.png" alt="Tanda Tangan" style="width: 200px; height: 200px;">
+                            <p class="fw-bold">Medicare</p>
                         </div>
                     </div>
                 </div>
@@ -135,9 +135,9 @@ if(isset($_POST["submit"])) {
                 <?php endif; ?>
 
                 <div class="text-center mt-3">
-                    <button id="printButton" class="btn btn-secondary mx-2">Cetak</button>
+                    <button id="printButton" class="btn btn-danger mx-2">Cetak</button>
                     <a href="transaksiBelanja.php" style="text-decoration: none;">
-                        <button id="kembali" class="btn btn-warning mx-2">Kembali</button>
+                        <button id="kembali" class="btn btn-secondary mx-2">Kembali</button>
                     </a>
                 </div>
 
@@ -145,7 +145,9 @@ if(isset($_POST["submit"])) {
 
         </div>
     </div>
+    <?php include '../footer.php'; ?>
 </section><!-- End Section -->
+
 
 <script>
     // Saat tombol cetak halaman ditekan
@@ -172,3 +174,5 @@ if(isset($_POST["submit"])) {
         document.getElementById("kembali").style.display = "none";
     };
 </script>
+
+

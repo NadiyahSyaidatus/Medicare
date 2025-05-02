@@ -18,7 +18,7 @@ $totalKeuangan = query("SELECT SUM(totalHarga) FROM transaksi WHERE statusPengir
 
 <style>
   .random-color {
-    background-color: rgb(231, 124, 165);
+    background-color: rgb(216, 125, 140);
     color: white;
     text-align: center;
     padding: 20px;
@@ -169,3 +169,4 @@ $totalKeuangan = query("SELECT SUM(totalHarga) FROM transaksi WHERE statusPengir
     </section>
 
 </main><!-- End #main -->
+<?php include '../footer.php'; ?>

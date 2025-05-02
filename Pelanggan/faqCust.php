@@ -43,3 +43,4 @@ $username = $_SESSION["username"];
 </div>
 
 </main><!-- End #main -->
+<?php include '../footer.php'; ?>

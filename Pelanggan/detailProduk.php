@@ -59,5 +59,5 @@ $produk = query("SELECT * FROM produk WHERE idProduk = '$id'")[0];
         </div>
     </div>
 </section>
-
 </main>
+<?php include '../footer.php'; ?>

@@ -74,3 +74,4 @@ $tanggalFormatted = date("j F Y", $tanggalLahir);
             </div>
         </section>
     </main>
+    <?php include '../footer.php'; ?>

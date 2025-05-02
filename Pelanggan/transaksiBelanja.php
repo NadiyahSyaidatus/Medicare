@@ -53,10 +53,10 @@ $allTransaksi = query("SELECT * FROM transaksi WHERE username = '$username' ORDE
                         <td><?= $transaksi["statusPengiriman"]; ?></td>
                         <td>Rp<?= number_format($transaksi["totalHarga"], 0, ',', '.'); ?></td>
                         <td>
-                            <a href="detailTransaksi.php?id=<?= $transaksi["idTransaksi"]; ?>" class="btn btn-primary">Detail</a>
+                            <a href="detailTransaksi.php?id=<?= $transaksi["idTransaksi"]; ?>" class="btn btn-danger">Detail</a>
                             <!-- batalkan transaksi apabila status belum accepted -->
                             <?php if($transaksi["statusTransaksi"] == 'Pending') : ?>
-                                <a href="batalkanTransaksi.php?id=<?= $transaksi["idTransaksi"]; ?>" class="btn btn-danger">Batalkan</a>
+                                <a href="batalkanTransaksi.php?id=<?= $transaksi["idTransaksi"]; ?>" class="btn btn-secondary">Batalkan</a>
                             <?php elseif(($transaksi["statusTransaksi"] == 'Accepted') && ($transaksi["statusPengiriman"] != 'Terkirim')) : ?>
                                 <a href="selesaikanTransaksi.php?id=<?= $transaksi["idTransaksi"]; ?>" class="btn btn-success">Terima</a>
                             <?php endif; ?>

@@ -34,7 +34,7 @@ if(isset($_SESSION["login"])){
     <div class="d-flex gap-2">
       <a href="loginPelanggan.php" class="btn btn-danger">Login</a>
       <a href="registrasiAkun.php" class="btn btn-outline-light">Register</a>
-      <a href="guestBook.php" class="btn btn-outline-light">Guest Book</a>
+      <a href="bukuTamu.php" class="btn btn-outline-light">Guest Book</a>
     </div>
   </div>
 </nav>

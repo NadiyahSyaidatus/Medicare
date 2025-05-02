@@ -65,12 +65,22 @@ if(isset($_POST["kirim"])){
 </head>
 
 <body>
+<!-- Header -->
+<nav class="navbar navbar-expand-lg bg-danger bg-opacity-75 rounded-bottom px-4 shadow mt-0">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+      <img src="img/logo.png" alt="Logo Apotek" width="70" class="me-3">
+      <span class="navbar-brand fw-bold fs-3 text-white">Medicare</span>
+    </div>
+    <div class="d-flex gap-2">
+      <a href="loginPelanggan.php" class="btn btn-danger">Login</a>
+      <a href="registrasiAkun.php" class="btn btn-outline-light">Register</a>
+      <a href="guestBook.php" class="btn btn-outline-light">Guest Book</a>
+    </div>
+  </div>
+</nav>
     <div class="card pt-3">
         <div class="card-body">
-          <a href="guestbook.php" class="logo d-flex align-items-center w-auto">
-                <img src="img/logo.png" alt="" style="width: 50px; height: 50px; margin-bottom: 50px;">
-                <span class="d-none d-lg-block" style="color: rgb(88, 25, 25); margin-bottom: 50px;">Medicare</span>
-                </a>
                 <div class="pt-4 pb-2">
                     <h5 class="card-title text-center pb-0 fs-4" style="color: rgb(88, 25, 25);">Buku Tamu</h5>
                     <p class="text-center small">Berikan Kesan dan Pesan anda kepada kami!</p>

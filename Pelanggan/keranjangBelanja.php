@@ -91,11 +91,11 @@ $totalHarga = query("SELECT SUM(harga) AS totalHarga FROM keranjang WHERE userna
                     <button class="btn btn-secondary" onclick="return confirm('Apakah anda yakin ingin menghapus semua produk di keranjang?')">
                         <a href="hapusKeranjang.php" style="color: white; text-decoration: none;">Hapus Keranjang</a>
                     </button>
-
                 </form>
             </div>
           </div>
         </div><!-- End Col -->
     </div><!-- End Row -->
 </section><!-- End Section -->
+<?php include '../footer.php'; ?>
 
