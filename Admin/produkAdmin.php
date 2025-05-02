@@ -11,10 +11,6 @@ $allProduk = query("SELECT * FROM produk");
 
 <main id="main" class="main" style="margin-left: 0;">
 
-    <div class="pagetitle ">
-      <h1 class="text" style = "color:rgb(88, 25, 25)">Produk</h1>
-    </div><!-- End Page Title -->
-
     <section class="section">
       <div class="row">
         <div class="">

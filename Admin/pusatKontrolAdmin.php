@@ -17,7 +17,7 @@ function tambahProduk($data){
         return false;
         die;
     }
-    $query = "INSERT INTO produk VALUES ('$idProduk','$namaProduk','$kategoriProduk','$detailProduk''$hargaProduk','$stokProduk','$gambarProduk')";   
+    $query = "INSERT INTO produk VALUES ('$idProduk','$namaProduk','$kategoriProduk','$detailProduk','$hargaProduk','$stokProduk','$gambarProduk')";   
     mysqli_query($connect, $query);
     return mysqli_affected_rows($connect);
 }

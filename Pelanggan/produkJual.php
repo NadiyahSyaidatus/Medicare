@@ -10,7 +10,6 @@ $kategori = array(
     "Peralatan Medis Dasar",
     "Alat Ukur dan Pemantau Kesehatan",
     "Alat Terapi dan Rehabilitasi",
-    "Alat Bantu Jalan",
     "Perlengkapan Rumah Sakit",
     "Perlengkapan Medis Umum & P3K",
     "Obat dan Suplemen",
@@ -55,7 +54,7 @@ $kategori = array(
                                 <?php else : ?>
                                     <div class="d-grid gap-2 d-md-flex justify-content-md-between">
                                         <a href="tambahKeranjang.php?idProduk=<?= $produk["idProduk"]; ?>" class="btn btn-danger me-md-2">Beli</a>
-                                        <a href="detailProduk.php?id=<?= $produk["idProduk"]; ?>" class="btn btn-primary">Detail</a>
+                                        <a href="detailProduk.php?id=<?= $produk["idProduk"]; ?>" class="btn btn-secondary px-4">Detail</a>
                                     </div>
                                 <?php endif; ?>
                             </div>

@@ -75,7 +75,7 @@ if(!isset($_SESSION["login"])){
     <div class="d-flex align-items-center justify-content-between">
       <a href="produkJual.php" class="logo d-flex align-items-center">
         <img src="../img/logo.png" alt="">
-        <span class="navbar-brand fw-bold fs-3 text-white">APOTEKIST</span>
+        <span class="navbar-brand fw-bold fs-3 text-white">Medicare</span>
       </a>
     </div><!-- End Logo -->
 

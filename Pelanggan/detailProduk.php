@@ -46,11 +46,11 @@ $produk = query("SELECT * FROM produk WHERE idProduk = '$id'")[0];
                     </table>
 
                     <div class="mt-4">
-                        <a href="produkJual.php" class="btn btn-danger px-4">Kembali</a>
+                        <a href="produkJual.php" class="btn btn-secondary px-4">Kembali</a>
                         <?php if($produk["stokProduk"] == 0): ?>
                             <button class="btn btn-danger px-4" disabled>Stok Habis</button>
                         <?php else: ?>
-                            <a href="tambahKeranjang.php?idProduk=<?= $produk["idProduk"]; ?>" class="btn btn-secondary px-4">Beli</a>
+                            <a href="tambahKeranjang.php?idProduk=<?= $produk["idProduk"]; ?>" class="btn btn-danger px-4">Beli</a>
                         <?php endif; ?>
                     </div>
                 </div>

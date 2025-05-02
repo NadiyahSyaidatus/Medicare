@@ -150,10 +150,10 @@ function checkout($data) {
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
-        $mail->setFrom('22082010038@student.upnjatim.ac.id', 'APOTEKIST');
+        $mail->setFrom('22082010038@student.upnjatim.ac.id', 'Medicare');
         $mail->addAddress($emailUser);
         $mail->Subject = "Invoice Pembayaran - $idTransaksi";
-        $mail->Body = "Terima kasih telah berbelanja di toko kami. Terlampir invoice Anda.";
+        $mail->Body = "Terima kasih telah berbelanja di Medicare!. Selalu cek Invoice Kamu ya!";
         $mail->addAttachment($lokasiFile);
 
         $mail->send();

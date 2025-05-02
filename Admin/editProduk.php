@@ -14,7 +14,6 @@ $kategori = array(
     "Peralatan Medis Dasar",
     "Alat Ukur dan Pemantau Kesehatan",
     "Alat Terapi dan Rehabilitasi",
-    "Alat Bantu Jalan",
     "Perlengkapan Rumah Sakit",
     "Perlengkapan Medis Umum & P3K",
     "Obat dan Suplemen",

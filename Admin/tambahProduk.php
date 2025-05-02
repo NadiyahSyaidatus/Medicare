@@ -28,7 +28,6 @@ $kategori = array(
     "Peralatan Medis Dasar",
     "Alat Ukur dan Pemantau Kesehatan",
     "Alat Terapi dan Rehabilitasi",
-    "Alat Bantu Jalan",
     "Perlengkapan Rumah Sakit",
     "Perlengkapan Medis Umum & P3K",
     "Obat dan Suplemen",
@@ -39,10 +38,6 @@ $kategori = array(
 
 ?>
 <main id="main" class="main" style="margin-left: 0;">
-
-    <div class="pagetitle ">
-      <h1 class="text-danger">Tambah Produk</h1>
-    </div><!-- End Page Title -->
 
     <section class="section">
         <div class="row">
