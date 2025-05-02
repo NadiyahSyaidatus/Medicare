@@ -11,15 +11,14 @@ $idProduk = $_GET["id"];
 $produk = query("SELECT * FROM produk WHERE idProduk = '$idProduk'")[0];
 
 $kategori = array(
-    "Peralatan Medis",
-    "Obat dan Suplemen",
-    "Alat Bantu Jalan",
-    "Alat Ukur Kesehatan",
-    "Alat Pemantau Kesehatan",
+    "Peralatan Medis Dasar",
+    "Alat Ukur dan Pemantau Kesehatan",
     "Alat Terapi dan Rehabilitasi",
+    "Alat Bantu Jalan",
     "Perlengkapan Rumah Sakit",
-    "Perlengkapan Dokter",
-    "Perlengkapan Perawat",
+    "Perlengkapan Medis Umum & P3K",
+    "Obat dan Suplemen",
+    "Perlengkapan Dokter dan Perawat",
     "lain-lain"
 );
 
@@ -90,6 +89,11 @@ if(isset($_POST["submit"])){
                             <label for="stokProduk" class="form-label">Stok Produk</label>
                             <input type="number" class="form-control" id="stokProduk" name="stokProduk" required value="<?= $produk["stokProduk"]; ?>">
                         </div>
+
+                        <div class="col-12">
+                            <label for="detailProduk" class="form-label">Detail Produk</label>
+                            <textarea class="form-control" id="detailProduk" name="detailProduk" rows="5" required><?= $produk["detailProduk"]; ?></textarea>
+                            </div>
 
                         <div class="col-12">
                             <label for="gambarProduk" class="form-label">Gambar Produk</label><br>

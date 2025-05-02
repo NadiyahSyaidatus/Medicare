@@ -1,7 +1,7 @@
 <?php 
 
 //Koneksi ke database
-$connect = mysqli_connect("localhost", "root", "", "onlineshop");
+$connect = mysqli_connect("localhost", "root", "", "db_medicare");
 
 //Function untuk query
 function query($query){

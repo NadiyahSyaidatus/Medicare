@@ -25,15 +25,14 @@ if(isset($_POST["submit"])){
 }
 
 $kategori = array(
-    "Peralatan Medis",
-    "Obat dan Suplemen",
-    "Alat Bantu Jalan",
-    "Alat Ukur Kesehatan",
-    "Alat Pemantau Kesehatan",
+    "Peralatan Medis Dasar",
+    "Alat Ukur dan Pemantau Kesehatan",
     "Alat Terapi dan Rehabilitasi",
+    "Alat Bantu Jalan",
     "Perlengkapan Rumah Sakit",
-    "Perlengkapan Dokter",
-    "Perlengkapan Perawat",
+    "Perlengkapan Medis Umum & P3K",
+    "Obat dan Suplemen",
+    "Perlengkapan Dokter dan Perawat",
     "lain-lain"
 );
 
@@ -78,6 +77,11 @@ $kategori = array(
                             <label for="stokProduk" class="form-label">Stok Produk</label>
                             <input type="number" class="form-control" id="stokProduk" name="stokProduk" required>
                         </div>
+
+                        <div class="col-12">
+                            <label for="detailProduk" class="form-label">Detail Produk</label>
+                            <textarea class="form-control" id="detailProduk" name="detailProduk" required></textarea>
+                            </div>
 
                         <div class="col-12">
                             <label for="gambarProduk" class="form-label">Gambar Produk</label>

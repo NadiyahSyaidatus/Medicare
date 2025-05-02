@@ -8,6 +8,7 @@ function tambahProduk($data){
     $idProduk = 'PRD-' . time();
     $namaProduk = htmlspecialchars($data["namaProduk"]);
     $kategoriProduk = htmlspecialchars($data["kategoriProduk"]);
+    $detailProduk = htmlspecialchars($data["detailProduk"]);
     $hargaProduk = htmlspecialchars($data["hargaProduk"]);
     $stokProduk = htmlspecialchars($data["stokProduk"]);
     $gambarProduk = upload();
@@ -16,7 +17,7 @@ function tambahProduk($data){
         return false;
         die;
     }
-    $query = "INSERT INTO produk VALUES ('$idProduk','$namaProduk','$kategoriProduk','$hargaProduk','$stokProduk','$gambarProduk')";   
+    $query = "INSERT INTO produk VALUES ('$idProduk','$namaProduk','$kategoriProduk','$detailProduk''$hargaProduk','$stokProduk','$gambarProduk')";   
     mysqli_query($connect, $query);
     return mysqli_affected_rows($connect);
 }
@@ -67,6 +68,7 @@ function updateProduk($data){
     $idProduk = $data["idProduk"];
     $namaProduk = htmlspecialchars($data["namaProduk"]);
     $kategoriProduk = htmlspecialchars($data["kategoriProduk"]);
+    $detailProduk = htmlspecialchars($data["detailProduk"]);
     $hargaProduk = htmlspecialchars($data["hargaProduk"]);
     $stokProduk = htmlspecialchars($data["stokProduk"]);
     $beforeupdate = htmlspecialchars($data["beforeupdate"]);
@@ -80,6 +82,7 @@ function updateProduk($data){
     $query = "UPDATE produk SET 
                 namaProduk = '$namaProduk',
                 kategoriProduk = '$kategoriProduk',
+                detailProduk = '$detailProduk',
                 hargaProduk = '$hargaProduk',
                 stokProduk = '$stokProduk',
                 gambarProduk = '$gambarProduk'

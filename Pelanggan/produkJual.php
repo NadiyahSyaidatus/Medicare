@@ -7,15 +7,14 @@ require 'headerPelanggan.php';
 $allProduk = query("SELECT * FROM produk");
 
 $kategori = array(
-    "Peralatan Medis",
-    "Obat dan Suplemen",
-    "Alat Bantu Jalan",
-    "Alat Ukur Kesehatan",
-    "Alat Pemantau Kesehatan",
+    "Peralatan Medis Dasar",
+    "Alat Ukur dan Pemantau Kesehatan",
     "Alat Terapi dan Rehabilitasi",
+    "Alat Bantu Jalan",
     "Perlengkapan Rumah Sakit",
-    "Perlengkapan Dokter",
-    "Perlengkapan Perawat",
+    "Perlengkapan Medis Umum & P3K",
+    "Obat dan Suplemen",
+    "Perlengkapan Dokter dan Perawat",
     "lain-lain"
 );
 ?>

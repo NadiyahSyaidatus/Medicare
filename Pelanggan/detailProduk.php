@@ -12,54 +12,52 @@ $produk = query("SELECT * FROM produk WHERE idProduk = '$id'")[0];
 ?>
 <main id="main" class="main" style="margin-left: 0;">
 
-    <div class="pagetitle">
-      <h1 class="text-danger fw-bold mb-4">Detail Produk</h1>
-    </div><!-- End Page Title -->
+<section class="section">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <h2 class="text-danger fw-bold mb-4">Detail Produk: <?= $produk["namaProduk"]; ?></h2>
 
-    <section class="section">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card shadow-sm">
-                    <div class="card-body p-4">
-                        <h5 class="card-title text-primary mb-4">Detail Produk <?= $produk["namaProduk"]; ?></h5>
+            <div class="row mb-4">
+                <div class="col-md-5">
+                    <img src="../img/<?= $produk["gambarProduk"]; ?>" class="img-fluid rounded shadow" alt="<?= $produk["namaProduk"]; ?>">
+                </div>
+                <div class="col-md-7">
+                    <table class="table table-borderless">
+                        <tr>
+                            <th class="fw-bold" style="width: 180px;">Nama Produk</th>
+                            <td>: <?= $produk["namaProduk"]; ?></td>
+                        </tr>
+                        <tr>
+                            <th class="fw-bold">Kategori Produk</th>
+                            <td>: <?= $produk["kategoriProduk"]; ?></td>
+                        </tr>
+                        <tr>
+                            <th class="fw-bold">Detail Produk</th>
+                            <td>: <?= nl2br(htmlspecialchars($produk["detailProduk"])); ?></td>
+                            </tr>
+                        <tr>
+                            <th class="fw-bold">Harga</th>
+                            <td>: Rp<?= number_format($produk["hargaProduk"], 0, ',', '.'); ?></td>
+                        </tr>
+                        <tr>
+                            <th class="fw-bold">Stok</th>
+                            <td>: <?= $produk["stokProduk"]; ?></td>
+                        </tr>
+                    </table>
 
-                        <!-- Vertical Form -->
-                        <form class="row g-4" method="post" enctype="multipart/form-data">
-                        <div class="col-12">
-                                <label for="gambarProduk" class="form-label fw-bold">Gambar Produk</label><br>
-                                <img src="../img/<?= $produk["gambarProduk"]; ?>" class="img-fluid rounded mb-3" style="max-width: 100%; height: auto;"><br>
-                            </div>
-
-                            <div class="col-12">
-                                <label for="namaProduk" class="form-label fw-bold">Nama Produk</label>
-                                <input class="form-control bg-light" id="namaProduk" name="namaProduk" readonly value="<?= $produk["namaProduk"]; ?>">
-                            </div>
-
-                            <div class="col-12">
-                                <label for="kategoriProduk" class="form-label fw-bold">Kategori Produk</label>
-                                <input class="form-control bg-light" id="kategoriProduk" name="kategoriProduk" readonly value="<?= $produk["kategoriProduk"]; ?>">
-                            </div>
-
-                            <div class="col-12">
-                                <label for="hargaProduk" class="form-label fw-bold">Harga Produk</label>
-                                <input class="form-control bg-light" id="hargaProduk" name="hargaProduk" readonly value="Rp<?= number_format($produk["hargaProduk"], 0, ',', '.'); ?>">
-                            </div>
-
-                            <div class="col-12">
-                                <label for="stokProduk" class="form-label fw-bold">Stok Produk</label>
-                                <input class="form-control bg-light" id="stokProduk" name="stokProduk" readonly value="<?= $produk["stokProduk"]; ?>">
-                            </div>
-
-                            <div class="text-center mt-4">
-                                <a href="produkJual.php" class="btn btn-warning px-4 me-2">Kembali</a>
-                                <a href="tambahKeranjang.php?idProduk=<?= $produk["idProduk"]; ?>" class="btn btn-success px-4">Beli</a>
-                            </div>
-                        </form><!-- Vertical Form -->
-
+                    <div class="mt-4">
+                        <a href="produkJual.php" class="btn btn-danger px-4">Kembali</a>
+                        <?php if($produk["stokProduk"] == 0): ?>
+                            <button class="btn btn-danger px-4" disabled>Stok Habis</button>
+                        <?php else: ?>
+                            <a href="tambahKeranjang.php?idProduk=<?= $produk["idProduk"]; ?>" class="btn btn-secondary px-4">Beli</a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-</main><!-- End #main -->
+        </div>
+    </div>
+</section>
+
+</main>

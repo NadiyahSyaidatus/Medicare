@@ -35,6 +35,7 @@ $allProduk = query("SELECT * FROM produk");
                     <th scope="col">ID Produk</th>
                     <th scope="col">Nama Produk</th>
                     <th scope="col">Kategori</th>
+                    <th scope="col">Detail</th>
                     <th scope="col">Harga</th>
                     <th scope="col">Stok</th>
                     <th scope="col">Gambar</th>
@@ -49,6 +50,7 @@ $allProduk = query("SELECT * FROM produk");
                         <td><?= $produk["idProduk"]; ?></td>
                         <td><?= $produk["namaProduk"]; ?></td>
                         <td><?= $produk["kategoriProduk"]; ?></td>
+                        <td><?= nl2br(htmlspecialchars($produk["detailProduk"])); ?></td>
                         <td>Rp<?= number_format($produk["hargaProduk"], 0, ',', '.'); ?></td>
                         <td><?= $produk["stokProduk"]; ?></td>
                         <td><img src="../img/<?= $produk["gambarProduk"]; ?>" width="100px"></td>
