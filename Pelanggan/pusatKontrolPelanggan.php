@@ -124,10 +124,21 @@ function checkout($data) {
     $pdf->SetFont('Arial','',12);
     $no = 1;
     foreach ($items as $item) {
-        $pdf->Cell(10,10,$no++,1);
-        $pdf->Cell(80,10,$item['namaProduk'],1);
-        $pdf->Cell(30,10,$item['jumlah'],1);
-        $pdf->Cell(50,10,"Rp".number_format($item['harga'],0,',','.'),1);
+        $startX = $pdf->GetX();
+        $startY = $pdf->GetY();
+        
+        $pdf->Cell(10,10,$no++,1,0); // No
+        
+        // Produk (gunakan MultiCell)
+        $pdf->MultiCell(80,10,$item['namaProduk'],1);
+        
+        // Karena MultiCell pindah baris otomatis, kita harus mengatur posisi kembali
+        $height = $pdf->GetY() - $startY;
+        $pdf->SetXY($startX + 10 + 80, $startY);
+        
+        // Jumlah & Harga, atur tingginya menyesuaikan tinggi MultiCell produk
+        $pdf->Cell(30,$height,$item['jumlah'],1,0);
+        $pdf->Cell(50,$height,"Rp".number_format($item['harga'],0,',','.'),1);
         $pdf->Ln();
     }
     $pdf->Cell(120,10,'TOTAL',1);
