@@ -99,15 +99,15 @@ if (isset($_POST["login"])) {
             <div class="d-flex justify-content-center py-4">
                 <a href="loginPelanggan.php" class="logo d-flex align-items-center w-auto">
                 <img src="img/logo.png" alt="" style="width: 50px; height: 50px;"> <!-- Menyesuaikan ukuran logo -->
-                <span class="d-none d-lg-block" style="color: rgb(88, 25, 25);">APOTEKIST</span>
+                <span class="d-none d-lg-block" style="color: rgb(88, 25, 25);">Medicare</span>
                 </a>
               </div><!-- End Logo -->
 
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="pt-4 pb-2">
-                  <h5 class="card-title text-center pb-0 fs-4" style="color: rgb(88, 25, 25);">Login to Your Account</h5>
-                    <p class="text-center small">Enter your username & password to login</p>
+                  <h5 class="card-title text-center pb-0 fs-4" style="color: rgb(88, 25, 25);">Selamat datang kembali!</h5>
+                    <p class="text-center small">Masukkan Username & Password</p>
                   </div>
 
                   <form class="row g-3 needs-validation" method="post">
@@ -117,14 +117,14 @@ if (isset($_POST["login"])) {
                       <div class="input-group has-validation">
                         <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
                         <input type="text" name="username" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Please enter your username.</div>
+                        <div class="invalid-feedback">Masukkan username anda.</div>
                       </div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Password</label>
                       <input type="password" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Please enter your password!</div>
+                      <div class="invalid-feedback">Masukkan Password anda!</div>
                     </div>
 
                     <!-- if $error -->
@@ -136,9 +136,7 @@ if (isset($_POST["login"])) {
                       <button class="btn w-100" style="background-color:rgb(165, 64, 64);; color: white;" type="submit" name="login">Login</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Don't have account? <a href="registrasiAkun.php" class="text-primary">Create an account</a></p>
-                      <p class="small mb-0">Already have an account? <a href="loginPelanggan.php" class="text-primary">Customer Log in</a></p>
-                      <p class="small mb-0">Want to send guest book? <a href="guestBook.php" class="text-primary">guestBook</a></p>
+                      <p class="small mb-0">Apakah anda pelanggan? <a href="loginPelanggan.php" class="text-primary">Login Pelanggan</a></p>
                     </div>
                   </form>
 

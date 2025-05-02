@@ -64,7 +64,7 @@ if(isset($_POST["submit"])){
               <div class="d-flex justify-content-center py-4">
                 <a href="loginPelanggan.php" class="logo d-flex align-items-center w-auto">
                 <img src="img/logo.png" alt="" style="width: 50px; height: 50px;">
-                <span class="d-none d-lg-block" style="color: rgb(88, 25, 25);">APOTEKIST</span>
+                <span class="d-none d-lg-block" style="color: rgb(88, 25, 25);">Medicare</span>
                 </a>
               </div><!-- End Logo -->
 
@@ -73,8 +73,8 @@ if(isset($_POST["submit"])){
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4" style="color: rgb(88, 25, 25);">Create an Account</h5>
-                    <p class="text-center small">Enter your personal details to create account</p>
+                    <h5 class="card-title text-center pb-0 fs-4" style="color: rgb(88, 25, 25);">Buat Akun Baru!</h5>
+                    <p class="text-center small">Lengkapi informasi pribadi untuk membuat akun</p>
                   </div>
 
                   <form class="row g-3 needs-validation" novalidate method="POST">
@@ -83,78 +83,78 @@ if(isset($_POST["submit"])){
                       <div class="input-group has-validation">
                         <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
                         <input type="text" name="username" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Please choose a username.</div>
+                        <div class="invalid-feedback">Buat username anda</div>
                       </div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Password</label>
                       <input type="password" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Please enter your password!</div>
+                      <div class="invalid-feedback">Buat password anda</div>
                     </div>
 
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">Re-Type Password</label>
+                      <label for="yourPassword" class="form-label">Konfirmasi Password</label>
                       <input type="password" name="password2" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Please Re-Type your password!</div>
+                      <div class="invalid-feedback">Konfirmasi password anda!</div>
                     </div>
 
                     <div class="col-12">
-                      <label for="yourName" class="form-label">Your Name</label>
+                      <label for="yourName" class="form-label">Nama Anda</label>
                       <input type="text" name="namaLengkap" class="form-control" id="yourName" required>
-                      <div class="invalid-feedback">Please, enter your name!</div>
+                      <div class="invalid-feedback">Masukkan nama anda!</div>
                     </div>
 
                     <div class="col-12">
-                      <label for="yourEmail" class="form-label">Your Email</label>
+                      <label for="yourEmail" class="form-label">Email</label>
                       <input type="email" name="email" class="form-control" id="yourEmail" required>
-                      <div class="invalid-feedback">Please enter a valid Email adddress!</div>
+                      <div class="invalid-feedback">Masukkan alamat email yang valid!</div>
                     </div>
 
                     <div class="col-12">
-                      <label for="dob" class="form-label">Date of Birth</label>
+                      <label for="dob" class="form-label">Tanggal Lahir</label>
                       <input type="date" name="dob" class="form-control" id="dob" required>
-                      <div class="invalid-feedback">Please enter a valid Date of Birth!</div>
+                      <div class="invalid-feedback">Masukkan tanggak lahir yang valid!</div>
                     </div>
 
                     <div class="col-12">
-                      <label for="gender" class="form-check-label">Gender</label><br>
-                      <input class="form-check-input" type="radio" name="gender" class="form-control" id="gender" value="male" required> Male
-                      <input class="form-check-input" type="radio" name="gender" class="form-control" id="gender" value="female" required> Female
-                      <div class="invalid-feedback">Please enter a valid Email adddress!</div>
+                      <label for="gender" class="form-check-label">Jenis Kelamin</label><br>
+                      <input class="form-check-input" type="radio" name="gender" class="form-control" id="gender" value="male" required> Laki-laki
+                      <input class="form-check-input" type="radio" name="gender" class="form-control" id="gender" value="female" required> Perempuan
+                      <div class="invalid-feedback">-</div>
                     </div>
 
                     <div class="col-12">
-                      <label for="alamat" class="form-label">Address</label>
+                      <label for="alamat" class="form-label">Alamat</label>
                       <input type="text" name="alamat" class="form-control" id="alamat" required>
-                      <div class="invalid-feedback">Please, enter your address!</div>
+                      <div class="invalid-feedback">Masukkan alamat anda!</div>
                     </div>
 
                     <div class="col-12">
-                      <label for="kota" class="form-label">City</label>
+                      <label for="kota" class="form-label">Kota</label>
                       <input type="text" name="kota" class="form-control" id="kota" required>
-                      <div class="invalid-feedback">Please, enter your City!</div>
+                      <div class="invalid-feedback">Masukkan kota anda!</div>
                     </div>
 
                     <div class="col-12">
-                      <label for="contact" class="form-label">Contact</label>
+                      <label for="contact" class="form-label">Telepon</label>
                       <input type="number" name="contact" class="form-control" id="contact" required pattern="[0-9]*">
-                      <div class="invalid-feedback">Please, enter your Contact!</div>
+                      <div class="invalid-feedback">Masukkan nomor telepon!</div>
                     </div>
 
                     <div class="col-12">
                       <label for="paypalID" class="form-label">paypal ID</label>
                       <input type="number" name="paypalID" class="form-control" id="paypalID" required pattern="[0-9]*">
-                      <div class="invalid-feedback">Please, enter your paypalID!</div>
+                      <div class="invalid-feedback">Masukkan ID Paypal anda!</div>
                     </div>
                     <div class="text-center">
                       <button type="submit" class="btn " style="background-color:rgb(165, 64, 64); color: white;"  name="submit">Submit</button>
                       <button type="reset" class="btn btn-secondary">Reset</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Already have an account? <a href="loginPelanggan.php" class="text-primary">Log in</a></p>
-                      <p class="small mb-0">You're administator? <a href="loginAdmin.php" class="text-primary">Administator Login</a></p>
-                      <p class="small mb-0">Want to send guest book? <a href="guestBook.php" class="text-primary">guestBook</a></p>
+                      <p class="small mb-0">Sudah memiliki akun? <a href="loginPelanggan.php" class="text-primary">Login Akun</a></p>
+                      <p class="small mb-0">Apakah kamu admin? <a href="loginAdmin.php" class="text-primary">Login Admin</a></p>
+                      <p class="small mb-0">Isi buku tamu? <a href="bukuTamu.php" class="text-primary">Buku Tamu</a></p>
                     </div>
                   </form>
 

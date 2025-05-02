@@ -1,6 +1,6 @@
 <?php 
 
-$title = 'Guest Book';
+$title = 'Buku Tamu';
 require 'connect.php';
 
 // memanggil function addGuestBook
@@ -69,8 +69,12 @@ if(isset($_POST["kirim"])){
         <div class="card-body">
           <a href="guestbook.php" class="logo d-flex align-items-center w-auto">
                 <img src="img/logo.png" alt="" style="width: 50px; height: 50px; margin-bottom: 50px;">
-                <span class="d-none d-lg-block" style="color: rgb(88, 25, 25); margin-bottom: 50px;">GUEST BOOK</span>
+                <span class="d-none d-lg-block" style="color: rgb(88, 25, 25); margin-bottom: 50px;">Medicare</span>
                 </a>
+                <div class="pt-4 pb-2">
+                    <h5 class="card-title text-center pb-0 fs-4" style="color: rgb(88, 25, 25);">Buku Tamu</h5>
+                    <p class="text-center small">Berikan Kesan dan Pesan anda kepada kami!</p>
+                  </div>
             <!-- Vertical Form -->
             <form class="row g-3" method="POST">
                 <div class="col-12">
@@ -92,9 +96,8 @@ if(isset($_POST["kirim"])){
 
             </div>
             <div class="col-12">
-                <p class="small mb-0">Don't have account? <a href="registrasiAkun.php" class="text-primary">Create an account</a></p>
-                <p class="small mb-0">Already have an account? <a href="loginPelanggan.php" class="text-primary">Log in</a></p>
-                <p class="small mb-0">You're administator? <a href="loginAdmin.php" class="text-primary">Administator Login</a></p>
+            <p class="small mb-0">Apakah anda pelanggan? <a href="loginPelanggan.php" class="text-primary">Login Pelanggan</a></p>
+            <p class="small mb-0">Tidak memiliki akun? <a href="registrasiAkun.php" class="text-primary">Buat akun baru</a></p>
             </div>
           </div>
         </div>

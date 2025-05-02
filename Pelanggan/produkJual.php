@@ -22,7 +22,7 @@ $kategori = array(
 
 <main id="main" class="main" style="margin-left: 0;">
     <div class="pagetitle">
-        <h1 class="text" style="color:rgb(88, 25, 25)">APOTEKIST PRODUCT</h1>
+        <h1 class="text" style="color:rgb(88, 25, 25)">Produk Medicare</h1>
     </div><!-- End Page Title -->
 
     <!-- live dropdown with jquery for filter kategoriProduk -->
@@ -86,3 +86,4 @@ $kategori = array(
         });
     </script>
 </main>
+<?php include '../footer.php'; ?>

@@ -12,7 +12,7 @@ if(isset($_SESSION["login"])){
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Apotekist</title>
+  <title>Medicare</title>
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .banner-image img {
@@ -29,7 +29,7 @@ if(isset($_SESSION["login"])){
   <div class="container-fluid d-flex justify-content-between align-items-center">
     <div class="d-flex align-items-center">
       <img src="img/logo.png" alt="Logo Apotek" width="70" class="me-3">
-      <span class="navbar-brand fw-bold fs-3 text-white">APOTEKIST</span>
+      <span class="navbar-brand fw-bold fs-3 text-white">Medicare</span>
     </div>
     <div class="d-flex gap-2">
       <a href="loginPelanggan.php" class="btn btn-danger">Login</a>
@@ -44,7 +44,7 @@ if(isset($_SESSION["login"])){
   <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.6);"></div>
   <div class="container position-relative z-2">
     <img src="img/logo.png" alt="Logo" style="width: 200px; height: 200px; margin-bottom: -50px;">
-    <h1 class="display-5 fw-bold mb-1" style="margin-top: 0px;">Apotekist</h1>
+    <h1 class="display-5 fw-bold mb-1" style="margin-top: 0px;">Medicare</h1>
     <p class="lead mt-0" style="margin-top: 0;">Your One-Stop Marketplace for Quality Medical Tools and Equipment</p>
   </div>
 </section>
@@ -55,7 +55,7 @@ if(isset($_SESSION["login"])){
         <div class="container py-5">
             <div class="row text-center">
                 <div class="col-12 mb-5">
-                    <h2 class="display-4">Solusi Terbaik dari Apotekist</h2>
+                    <h2 class="display-4">Solusi Terbaik dari Medicare</h2>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card shadow-sm h-100 rounded-5">
