@@ -100,7 +100,7 @@ if(isset($_POST["submit"])){
                     </div>
 
                     <div class="col-12">
-                      <label for="yourName" class="form-label">Nama Anda</label>
+                      <label for="yourName" class="form-label">Nama Lengkap</label>
                       <input type="text" name="namaLengkap" class="form-control" id="yourName" required>
                       <div class="invalid-feedback">Masukkan nama anda!</div>
                     </div>

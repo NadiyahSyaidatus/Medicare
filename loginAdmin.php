@@ -19,7 +19,7 @@ if (isset($_COOKIE['username']) && isset($_COOKIE['key'])) {
 
 // Cek apakah user sudah login
 if (isset($_SESSION["login"])) {
-    header("Location: Admin/dashboard.php");
+    header("Location: Admin/Admin_dashboard.php");
     exit;
 }
 
@@ -41,7 +41,7 @@ if (isset($_POST["login"])) {
                 setcookie('username', $row['username'], time() + 60);
                 setcookie('key', hash('sha256', $row['username']));
             }
-            header("Location: Admin/dashboard.php");
+            header("Location: Admin/Admin_dashboard.php");
             exit;  // Pastikan setelah header() ada exit agar kode selanjutnya tidak dieksekusi
         }
     }

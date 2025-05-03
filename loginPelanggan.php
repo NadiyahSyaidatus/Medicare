@@ -40,7 +40,7 @@ if(isset($_SESSION["login"])){
                     setcookie('username', $row['username'], time()+60);
                     setcookie('key', hash('sha256', $row['username']));
                 }
-                header("Location: Pelanggan/produkJual.php");
+                header("Location: Pelanggan/Pelanggan_produkJual.php");
             }
         }
 

@@ -1,8 +1,8 @@
 <?php
 $title = 'FAQ Customer';
 
-require 'pusatKontrolPelanggan.php';
-require 'headerPelanggan.php';
+require 'Pelanggan_pusatKontrol.php';
+require 'Pelanggan_header.php';
 
 $username = $_SESSION["username"];
 

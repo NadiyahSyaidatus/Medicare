@@ -3,7 +3,7 @@ session_start();
 require 'connect.php';
 
 if(isset($_SESSION["login"])){
-    header("Location: Pelanggan/produkJual.php");
+    header("Location: Pelanggan/Pelanggan_produkJual.php");
     exit;
 }
 ?>
