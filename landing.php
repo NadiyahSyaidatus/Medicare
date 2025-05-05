@@ -9,19 +9,19 @@ if(isset($_SESSION["login"])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Medicare</title>
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .banner-image img {
-      width: 100%;
-      height: 25vh;
-      object-fit: cover;
-    }
-  </style>
-</head>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Medicare</title>
+      <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <style>
+          .banner-image img {
+              width: 100%;
+              height: 25vh;
+              object-fit: cover;
+          }
+      </style>
+  </head>
 <body>
 
 <!-- Header -->

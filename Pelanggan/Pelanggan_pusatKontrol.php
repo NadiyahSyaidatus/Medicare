@@ -104,9 +104,23 @@ function checkout($data) {
     // 5. Generate PDF
     $pdf = new FPDF();
     $pdf->AddPage();
+
+    // Logo dan Header Apotek
+    $pdf->Image('../img/logo.png', 10, 10, 20); // Logo di kiri atas (x=10, y=10, width=20)
+    $pdf->SetFont('Arial','B',14);
+    $pdf->SetXY(35,10);
+    $pdf->Cell(0,7,'MEDICARE',0,1);
+    $pdf->SetFont('Arial','',11);
+    $pdf->SetX(35);
+    $pdf->Cell(0,6,'Jl. Sehat Selalu No. 123, Surabaya',0,1);
+    $pdf->SetX(35);
+    $pdf->Cell(0,6,'(031) 123-4567 || info@medicare.com',0,1);
+    $pdf->Ln(10); // Spasi setelah header
+
     $pdf->SetFont('Arial','B',16);
     $pdf->Cell(0,10,'INVOICE PEMBAYARAN',0,1,'C');
     $pdf->Ln(5);
+
     $pdf->SetFont('Arial','',12);
     $pdf->Cell(0,10,"ID Transaksi: $idTransaksi",0,1);
     $pdf->Cell(0,10,"Nama: $username",0,1);
@@ -122,27 +136,43 @@ function checkout($data) {
     $pdf->Ln();
 
     $pdf->SetFont('Arial','',12);
-    $no = 1;
-    foreach ($items as $item) {
-        $startX = $pdf->GetX();
-        $startY = $pdf->GetY();
-        
-        $pdf->Cell(10,10,$no++,1,0); // No
-        
-        // Produk (gunakan MultiCell)
-        $pdf->MultiCell(80,10,$item['namaProduk'],1);
-        
-        // Karena MultiCell pindah baris otomatis, kita harus mengatur posisi kembali
-        $height = $pdf->GetY() - $startY;
-        $pdf->SetXY($startX + 10 + 80, $startY);
-        
-        // Jumlah & Harga, atur tingginya menyesuaikan tinggi MultiCell produk
-        $pdf->Cell(30,$height,$item['jumlah'],1,0);
-        $pdf->Cell(50,$height,"Rp".number_format($item['harga'],0,',','.'),1);
-        $pdf->Ln();
-    }
-    $pdf->Cell(120,10,'TOTAL',1);
-    $pdf->Cell(50,10,"Rp".number_format($totalHarga,0,',','.'),1);
+$no = 1;
+
+foreach ($items as $item) {
+    // Simpan posisi awal
+    $startX = $pdf->GetX();
+    $startY = $pdf->GetY();
+
+    // Hitung tinggi teks MultiCell produk
+    // Kita buat dummy MultiCell untuk ambil tinggi teks (tanpa output)
+    $pdf->SetXY($startX + 10, $startY); // posisi kolom namaProduk
+    $multiCellHeight = $pdf->GetStringWidth($item['namaProduk']) > 80 ? 
+        ceil(strlen($item['namaProduk']) / 35) * 10 : 10; // estimasi kasar
+    
+    // Kembali ke awal untuk isi semua cell dengan tinggi sama
+    $pdf->SetXY($startX, $startY);
+    $pdf->Cell(10, $multiCellHeight, $no++, 1, 0, 'C'); // No
+
+    // Produk (MultiCell tetap dipakai agar bisa wrap)
+    $pdf->SetXY($startX + 10, $startY);
+    $xBefore = $pdf->GetX();
+    $yBefore = $pdf->GetY();
+    $pdf->MultiCell(80, 10, $item['namaProduk'], 1);
+    $yAfter = $pdf->GetY();
+    $height = $yAfter - $yBefore;
+
+    // Jumlah & Harga
+    $pdf->SetXY($startX + 10 + 80, $startY);
+    $pdf->Cell(30, $height, $item['jumlah'], 1, 0, 'C');
+    $pdf->Cell(50, $height, "Rp".number_format($item['harga'], 0, ',', '.'), 1, 0, 'R');
+
+    // Pindah baris ke bawah berdasarkan tinggi baris
+    $pdf->SetY($yAfter);
+}
+
+// Total
+$pdf->Cell(120,10,'TOTAL',1);
+$pdf->Cell(50,10,"Rp".number_format($totalHarga,0,',','.'),1);
 
     // Simpan PDF
     $namaFile = 'invoice_' . $idTransaksi . '.pdf';
