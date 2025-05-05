@@ -90,11 +90,6 @@ if(!isset($_SESSION["login"]) && $checkLogin > 0){
                 <i class="bi bi-file-text"></i> Transaksi Belanja
               </a>
             </li>
-            <li>
-              <a class="dropdown-item" href="faqCust.php">
-                <i class="bi bi-question-circle"></i> FAQ Customer
-              </a>
-            </li>
           </ul>
         </li>
         <!-- End Layanan Button Dropdown -->
