@@ -188,35 +188,3 @@ if(isset($_POST["submit"])){
 </body>
 
 </html>
-
-
-
-<!-- <h1>REGISTASI</h1>
-
-<form action="" method="post">
-    <!-- username, password, retype password, email, date of birth, gender, addres, city, contct no, paypal  -->
-    <!-- Username : <input type="text" name="username" placeholder="Username"><br>
-    Password : <input type="password" name="password" placeholder="Password"><br>
-    Retype Password : <input type="password" name="password2" placeholder="Retype Password"><br>
-    Nama Lengkap : <input type="text" name="namaLengkap" placeholder="Nama Lengkap"><br>
-    E-Mail : <input type="email" name="email" placeholder="Email"><br>
-    Tanggal Lahir : <input type="date" name="dob" placeholder="Date of Birth"><br>
-    <!-- input radio gender -->
-    <!-- Gender :
-    <label for="male">Laki-laki:</label>
-    <input type="radio" id="male" name="gender" value="male">
-
-    <label for="female">Perempuan:</label>
-    <input type="radio" id="female" name="gender" value="female"><br>
-
-    Alamat :<input type="text" name="alamat" placeholder="alamat"><br>
-    Kota : <input type="text" name="kota" placeholder="kota"><br>
-    Contact :<input type="text" name="contact" placeholder="Contact No" pattern="[0-9]*"><br>
-    Pay-pal id : <input type="text" name="paypalID" placeholder="PaypalID" pattern="[0-9]*"><br>
-
-    <button type="submit" name="submit">Register</button> -->
-
-<!-- </form> -->
-
-<!-- sudah punya akun? <a href="login.php">Login</a>
-Anda administator? <a href="loginAdmin.php">Login Admin</a> -->

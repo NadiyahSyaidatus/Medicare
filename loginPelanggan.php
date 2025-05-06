@@ -178,12 +178,3 @@ if(isset($_SESSION["login"])){
 <?php endif; ?> -->
 
 
-<!-- <form action="" method="post">
-    <input type="text" name="username"><br>
-    <input type="password" name="password"><br>
-    <input type="submit" value="Login" name="login">
-</form>
-
-Belum punya akun? <a href="registrasi.php">Registrasi</a>
-Anda administator? <a href="loginAdmin.php">Login Admin</a>
-Guest Book? <a href="guestBook.php">Guest Book</a> -->

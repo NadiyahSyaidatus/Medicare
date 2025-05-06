@@ -170,15 +170,3 @@ if (isset($_POST["login"])) {
 </body>
 
 </html>
-
-
-
-<!-- 
-<form action="" method="post">
-    <input type="text" name="username"><br>
-    <input type="password" name="password"><br>
-    <input type="submit" value="Login" name="login">
-</form>
-
-Belum punya akun? <a href="registrasi.php">Registrasi</a>
-Login sebagai customer? <a href="login.php">Login Customer</a> -->
