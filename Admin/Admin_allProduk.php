@@ -5,7 +5,7 @@ $title = "Daftar Produk";
 require 'Admin_pusatKontrol.php';
 require 'Admin_header.php';
 
-$allProduk = query("SELECT * FROM produk");
+$allProduk = query("SELECT * FROM produk ORDER BY idProduk DESC");
 
 ?>
 

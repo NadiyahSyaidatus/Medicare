@@ -173,6 +173,33 @@ foreach ($items as $item) {
 // Total
 $pdf->Cell(120,10,'TOTAL',1);
 $pdf->Cell(50,10,"Rp".number_format($totalHarga,0,',','.'),1);
+$pdf->Ln(15); // Spasi setelah tabel
+
+// Generate VA untuk masing-masing bank
+$va_bni     = '8808' . rand(1000, 9999);
+$va_bri     = '0020' . rand(1000, 9999);
+$va_bca     = '0140' . rand(10000, 99999);
+$va_mandiri = '0088' . rand(100, 999);
+
+$pdf->SetFont('Arial','',11);
+$pdf->MultiCell(0, 8, "Pembayaran dapat dilakukan melalui Virtual Account:", 0);
+$pdf->MultiCell(0, 8, "BNI     : $va_bni", 0);
+$pdf->MultiCell(0, 8, "BRI     : $va_bri", 0);
+$pdf->MultiCell(0, 8, "BCA     : $va_bca", 0);
+$pdf->MultiCell(0, 8, "Mandiri : $va_mandiri", 0);
+$pdf->Ln(15);
+$pdf->MultiCell(0, 8, "*NB: Barang akan kami kirimkan langsung setelah pembayaran kami terima:D", 0);
+// Spasi sebelum tanda tangan
+$pdf->Ln(20);
+
+// Posisi tanda tangan di kanan bawah
+$pdf->SetFont('Arial','',11);
+$pdf->SetX(120); // Geser ke kanan
+$pdf->Cell(0, 6, 'Best Regards,', 0, 1, 'R'); // 'R' = rata kanan
+$pdf->SetX(120);
+$pdf->Cell(0, 6, 'Medicare', 0, 1, 'R');
+
+
 
     // Simpan PDF
     $namaFile = 'invoice_' . $idTransaksi . '.pdf';
@@ -194,7 +221,7 @@ $pdf->Cell(50,10,"Rp".number_format($totalHarga,0,',','.'),1);
         $mail->setFrom('22082010038@student.upnjatim.ac.id', 'Medicare');
         $mail->addAddress($emailUser);
         $mail->Subject = "Invoice Pembayaran - $idTransaksi";
-        $mail->Body = "Terima kasih telah berbelanja di Medicare!. Selalu cek Invoice Kamu ya!";
+        $mail->Body = "Tagihan Pembayaran Medicare. Segera Selesaikan Transaksi Anda!";
         $mail->addAttachment($lokasiFile);
 
         $mail->send();

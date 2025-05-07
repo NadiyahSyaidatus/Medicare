@@ -14,7 +14,7 @@ if(isset($_POST["submit"])){
         echo "
             <script>
                 alert('Customer berhasil diupdate!');
-                document.location.href = 'detailAkun.php';
+                document.location.href = 'Pelanggan_detailAkun.php';
             </script>
         ";
     } else {
@@ -99,7 +99,7 @@ if(isset($_POST["submit"])){
 
                             <div class="col-12 mt-2">
                                 <label for="paypalID" class="form-label">Paypal ID</label>
-                                <input type="text" class="form-control" id="paypalID" name="paypalID" required pattern="[0-9]*" value="<?= $customer["paypalID"]; ?>">
+                                <input type="text" class="form-control" id="paypalID" name="paypalID" value="<?= $customer["paypalID"]; ?>">
                             </div>
 
                             <button type="submit" name="submit" class="btn btn-danger mt-3">Update</button>

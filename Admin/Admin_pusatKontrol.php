@@ -18,6 +18,7 @@ function tambahProduk($data){
         die;
     }
     $query = "INSERT INTO produk VALUES ('$idProduk','$namaProduk','$kategoriProduk','$detailProduk','$hargaProduk','$stokProduk','$gambarProduk')";   
+    $allProduk = query("SELECT * FROM produk ORDER BY idProduk DESC");
     mysqli_query($connect, $query);
     return mysqli_affected_rows($connect);
 }

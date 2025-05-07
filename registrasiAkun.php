@@ -144,7 +144,7 @@ if(isset($_POST["submit"])){
 
                     <div class="col-12">
                       <label for="paypalID" class="form-label">paypal ID</label>
-                      <input type="number" name="paypalID" class="form-control" id="paypalID" required pattern="[0-9]*">
+                      <input type="number" name="paypalID" class="form-control" id="paypalID" >
                       <div class="invalid-feedback">Masukkan ID Paypal anda!</div>
                     </div>
                     <div class="text-center">
