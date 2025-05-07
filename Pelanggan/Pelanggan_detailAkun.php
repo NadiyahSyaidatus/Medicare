@@ -21,7 +21,7 @@ $tanggalFormatted = date("j F Y", $tanggalLahir);
     <section class="section">
         <div class="card p-3 shadow-lg rounded">
             <div class="card-body pt-3">
-                <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                <div class="tab-pane fade show profile-overview" id="profile-overview">
 
                     <!-- Detail Akun -->
                     <div class="row mb-3">
